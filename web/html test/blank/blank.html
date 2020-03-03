@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var _num = '1';
+        var _bool = false;
+
+
+        console.log(typeof(_num), typeof(_bool));
+        console.log("+ ", 5+1);
+        console.log("- ", 5-1);
+        console.log("/ ", 16/8);
+        console.log("* ", 2*2);
+        console.log("% ", 19%9);
+
+        var _num2 = 10;
+        console.log(_num2--);
+
+        var _str1 = 'hello';
+        var _str2 = 'world';
+
+        console.log(_str1 +' '+ _str2 + 5)
+        
+        var _str3 = 'hello';        
+        _str3 += ' world';
+        // _str3 = _str3 + ' world';
+
+        console.log("1 ", _str1 == _str2);
+
+        var _str4 = 'hello';
+        console.log("비교연산자");
+        console.log("2 ", _str1 != _str4);
+        console.log("3 ", '5' == 5);
+        console.log("4 ", '5' === 5);
+        console.log("5 ", '5' !== '5');
+        console.log("6 ", 4 > 5);
+
+
+        console.log("논리연산자");
+        console.log("1 ", 4 > 5 && 1 < 4);
+        console.log("2 ", 4 > 1 && 1 < 4);
+
+        var _bus = 'red';
+        var _cup = 'blue';
+        var _pen = 'red';
+        if (!_bus === 'blue' || _cup === 'blue' || _pen === 'blue') {
+            console.log('All blue!!');
+        }
+        else {
+            console.log(':(');
+        }
+
+        console.log(!true);
+        
+        console.log('조건 연산자');
+        var _result = _bus === 'blue' ? 'blue bus': 'red bus';
+        console.log(_result)
+
+        var _columnValue = 'kybphh';
+        var _result2 = _columnValue === '' ? '-' : _columnValue;
+        //console.log(_result2);
+
+        if (_columnValue === '') {
+            console.log('-')
+        }
+        else if(_columnValue === 'hhh') {
+            console.log('3h');
+        }
+        else if(_columnValue === 'kyb') {
+            console.log('김영범');
+        }
+        else
+        {
+            console.log(_columnValue);
+        }
+
+        console.log("반복문 for");
+
+
+        
+        document.addEventListener('DOMContentLoaded', function(){ 
+            var _container = document.getElementById('container');
+            
+            console.log(_container)
+            for(var _index = 5; _index <= 10; _index++) {
+                var _temp = '';
+                //console.log("start -> ", _index, _temp);
+
+                for(var _index2 = 5; _index2 < _index; _index2++){
+                    
+                    _temp += '*'
+                    
+                    //console.log(_index2, _temp);
+                }
+
+                var _div = document.createElement('div');
+
+                _div.appendChild(document.createTextNode(_temp))
+                _container.appendChild(_div);
+                //console.log(_temp);
+            } 
+
+        }, false);
+
+
+    </script>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+

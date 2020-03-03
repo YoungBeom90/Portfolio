@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>starcraft</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" 
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" 
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $(".cloaking").click(function() {
+                $(".wraith").fadeToggle("slow","linear");
+            });
+        });
+        $( function() {
+            $(".cloaking").draggable();
+        });
+    </script>
+    <style>
+        #cloacking { width: 150px; height: 150px; padding: 0.5em; }
+    </style>
+</head>
+<body>
+    <img class="cloaking" src="cloaking.png">
+    <img class="wraith" src="wraith.png">
+    
+</body>
+</html>
